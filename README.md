@@ -1,5 +1,5 @@
 Do not forget to set:
 
-mapping = "";
+    mapping = "";
 
 in config.4coder file under root directory.
