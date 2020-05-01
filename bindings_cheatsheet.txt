@@ -1,0 +1,37 @@
+PANELS
+------
+M-1 : close_other_panels
+M-2 : open_panel_vsplit
+M-3 : open_panel_hsplit
+M-0 : close_panel
+
+C-1 : view_buffer_other_panel
+C-2 : swap_panels
+
+
+SEARCH
+------
+C-f : forward incremental-search on current file
+C-r : reverse incremental-search on current file
+C-t : symbol-at-point search on current file - (search_identifier)
+
+On those 3 bindings:
+	down-arrow : repeat search forward
+	up-arrow   : repeat search backward
+
+
+CODE
+----
+M-.   : go to type definition symbol-at-point (list_all_locations_of_type_definition_of_identifier)
+C-S-t : find all references symbol-at-point (list_all_locations_of_identifier)
+C-S-f : prompt input to find all references - (list_all_locations)
+C-h   : prompt input to find definition - (jump_to_definition)
+
+M-'   : go to next brace scope [inside] - (select_next_scope_absolute)
+M-]   : go to prev brace scope [outside] - (select_prev_scope_absolute)
+
+M-S-' : go to next brace scope [outer level] - (select_next_scope_after_current)
+M-S-] : go to prev brace scope [outer level] - (select_prev_top_most_scope)
+
+M-[   : go to surrounding brace scope - (select_surrounding_scope)
+M-S-[ : go to surrounding most upper brace scope - (select_surrounding_scope_maximal)
