@@ -11,6 +11,7 @@
 
 // NOTE(allen): Users can declare their own managed IDs here.
 #include "tom_map.cpp"
+#include "tom_commands.cpp"
 
 #include "generated/managed_id_metadata.cpp"
 
