@@ -22,10 +22,16 @@ On those 3 bindings:
 
 CODE
 ----
-M-.   : go to type definition symbol-at-point (list_all_locations_of_type_definition_of_identifier)
-C-S-t : find all references symbol-at-point (list_all_locations_of_identifier)
-C-S-f : prompt input to find all references - (list_all_locations)
-C-h   : prompt input to find definition - (jump_to_definition)
+go to type definition 
+M-.   : symbol-at-point - (list_all_locations_of_type_definition_of_identifier)
+M-t   : prompt input - (list_all_locations_of_type_definition)
+
+find all references
+C-S-t : symbol-at-point - (list_all_locations_of_identifier)
+C-S-f : prompt input - (list_all_locations)
+
+find definition
+C-h   : prompt input - (jump_to_definition)
 
 M-'   : go to next brace scope [inside] - (select_next_scope_absolute)
 M-]   : go to prev brace scope [outside] - (select_prev_scope_absolute)
