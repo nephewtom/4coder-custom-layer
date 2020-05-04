@@ -36,3 +36,25 @@ CUSTOM_DOC("Switch to previous buffer.")
     View_ID view = get_view_for_locked_jump_buffer(app);
     if (view) {}
 }
+
+// TODO(TOM): Study how to do this... 
+// TODO(TOM): 1) How to write messages on *log* buffer?
+// TODO(TOM): 2) Ask in Discord...
+CUSTOM_COMMAND_SIG(kill_line)
+CUSTOM_DOC("Emulate Emacs kill-line C-k.")
+{
+    View_ID view = get_active_view(app, Access_ReadWriteVisible);
+    Buffer_ID buffer = view_get_buffer(app, view, Access_ReadWriteVisible);
+    i64 pos = view_get_cursor_pos(app, view);
+    i64 line = get_line_number_from_pos(app, buffer, pos);
+    Range_i64 range = get_line_pos_range(app, buffer, line);
+    range.end += 1;
+    i32 size = (i32)buffer_get_size(app, buffer);
+    range.end = clamp_top(range.end, size);
+    if (range_size(range) == 0 ||
+        buffer_get_char(app, buffer, range.end - 1) != '\n'){
+        range.start -= 1;
+        range.first = clamp_bot(0, range.first);
+    }
+    buffer_replace_range(app, buffer, range, string_u8_litexpr(""));
+}

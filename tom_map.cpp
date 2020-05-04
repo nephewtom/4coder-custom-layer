@@ -56,10 +56,10 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     Bind(project_fkey_command, KeyCode_F2);
     Bind(project_fkey_command, KeyCode_F3);
     Bind(project_fkey_command, KeyCode_F4);
-    Bind(project_fkey_command, KeyCode_F5);
+    Bind(reopen, KeyCode_F5);
     Bind(project_fkey_command, KeyCode_F6);
     Bind(project_fkey_command, KeyCode_F7);
-    Bind(project_fkey_command, KeyCode_F8);
+    Bind(interactive_switch_buffer, KeyCode_F8);
     Bind(project_fkey_command, KeyCode_F9);
     Bind(project_fkey_command, KeyCode_F10);
     Bind(project_fkey_command, KeyCode_F11);
@@ -138,6 +138,7 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     //Bind(replace_in_range,            KeyCode_A, KeyCode_Control);
     Bind(copy,                        KeyCode_C, KeyCode_Control);
     Bind(delete_line,                 KeyCode_D, KeyCode_Control);
+    Bind(kill_line,                 KeyCode_K, KeyCode_Control);
     Bind(delete_range,                KeyCode_D, KeyCode_Control, KeyCode_Shift);
     //Bind(center_view,                 KeyCode_E, KeyCode_Control);
     Bind(left_adjust_view,            KeyCode_E, KeyCode_Control, KeyCode_Shift);
