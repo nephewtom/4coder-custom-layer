@@ -30,6 +30,7 @@ CUSTOM_DOC("Close other panels except current one.")
     //if (panel == 0) {;}
 } 
 
+// TODO(TOM): Study how to do this
 CUSTOM_COMMAND_SIG(switch_to_previos_buffer)
 CUSTOM_DOC("Switch to previous buffer.")
 {

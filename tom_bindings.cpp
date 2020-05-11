@@ -20,18 +20,16 @@ custom_layer_init(Application_Links *app){
     Thread_Context *tctx = get_thread_context(app);
     
     // NOTE(allen): setup for default framework
-    async_task_handler_init(app, &global_async_system);
-    code_index_init();
-    buffer_modified_set_init();
-    Profile_Global_List *list = get_core_profile_list(app);
-    ProfileThreadName(tctx, list, string_u8_litexpr("main"));
-    initialize_managed_id_metadata(app);
-    set_default_color_scheme(app);
+    default_framework_init(app);
     
     // NOTE(allen): default hooks and command maps
     set_all_default_hooks(app);
     mapping_init(tctx, &framework_mapping);
+#if OS_MAC
+    setup_mac_mapping(&framework_mapping, mapid_global, mapid_file, mapid_code);
+#else
     tom_mapping(&framework_mapping, mapid_global, mapid_file, mapid_code);
+#endif
 }
 
 #endif //FCODER_DEFAULT_BINDINGS

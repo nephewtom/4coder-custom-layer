@@ -27,7 +27,8 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     Bind(open_panel_vsplit, KeyCode_2, KeyCode_Alt);
     Bind(open_panel_hsplit, KeyCode_3, KeyCode_Alt);
     Bind(close_panel, KeyCode_0, KeyCode_Alt);
-    
+
+    Bind(quick_swap_buffer,          KeyCode_0, KeyCode_Control);
     //    Bind(interactive_new,               KeyCode_N, KeyCode_Control);
     
     Bind(interactive_open_or_new,       KeyCode_O, KeyCode_Control);
@@ -234,7 +235,7 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     Bind(if0_off,                    KeyCode_I, KeyCode_Alt);
     //Bind(open_file_in_quotes,        KeyCode_1, KeyCode_Alt);
     //Bind(open_matching_file_cpp,     KeyCode_2, KeyCode_Alt);
-    Bind(write_zero_struct,          KeyCode_0, KeyCode_Control);
+    //Bind(write_zero_struct,          KeyCode_0, KeyCode_Control);
     
     Bind(jump_to_definition,           KeyCode_H, KeyCode_Control);
 }
