@@ -27,7 +27,7 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     Bind(open_panel_vsplit, KeyCode_2, KeyCode_Alt);
     Bind(open_panel_hsplit, KeyCode_3, KeyCode_Alt);
     Bind(close_panel, KeyCode_0, KeyCode_Alt);
-
+    
     Bind(quick_swap_buffer,          KeyCode_0, KeyCode_Control);
     //    Bind(interactive_new,               KeyCode_N, KeyCode_Control);
     
@@ -40,10 +40,11 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     Bind(interactive_switch_buffer,     KeyCode_I, KeyCode_Control);
     //Bind(project_go_to_root_directory,  KeyCode_H, KeyCode_Control);
     Bind(save_all_dirty_buffers,        KeyCode_S, KeyCode_Control, KeyCode_Shift);
-    // Bind(change_to_build_panel,         KeyCode_Period, KeyCode_Alt);
+    
+    Bind(change_to_build_panel,         KeyCode_Period, KeyCode_Control);
     Bind(close_build_panel,             KeyCode_Comma, KeyCode_Alt);
     Bind(goto_next_jump,                KeyCode_J, KeyCode_Alt);
-    Bind(goto_prev_jump,                KeyCode_J, KeyCode_Alt, KeyCode_Shift);
+    Bind(goto_prev_jump,                KeyCode_K, KeyCode_Alt);
     Bind(goto_first_jump,               KeyCode_H, KeyCode_Alt);
     
     Bind(build_in_build_panel,          KeyCode_M, KeyCode_Alt);
@@ -97,7 +98,6 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     Bind(move_up,                KeyCode_P, KeyCode_Control);
     Bind(move_down,              KeyCode_N, KeyCode_Control);
     Bind(move_left,              KeyCode_B, KeyCode_Control);
-    //    Bind(move_right,             KeyCode_F, KeyCode_Control); // Used for search
     
     Bind(seek_end_of_line,       KeyCode_End);
     Bind(seek_beginning_of_line, KeyCode_Home);
@@ -148,15 +148,14 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     
     Bind(list_all_locations,          KeyCode_F, KeyCode_Control, KeyCode_Shift);
     //Bind(list_all_substring_locations_case_insensitive, KeyCode_F, KeyCode_Control, KeyCode_Alt);
+    
     Bind(goto_line,                   KeyCode_G, KeyCode_Alt);
-    // Bind(goto_line,                   KeyCode_G, KeyCode_Control);
     Bind(list_all_locations_of_selection,  KeyCode_G, KeyCode_Control, KeyCode_Shift);
     
     Bind(snippet_lister,              KeyCode_J, KeyCode_Control);
     
     
     Bind(kill_buffer,                 KeyCode_W, KeyCode_Control);
-    //    Bind(kill_buffer,                 KeyCode_K, KeyCode_Control, KeyCode_Shift);
     
     Bind(duplicate_line,              KeyCode_L, KeyCode_Control);
     Bind(cursor_mark_swap,            KeyCode_M, KeyCode_Control);
@@ -168,8 +167,8 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     
     Bind(save,                        KeyCode_S, KeyCode_Control);
     Bind(save_all_dirty_buffers,      KeyCode_S, KeyCode_Control, KeyCode_Shift);
-    Bind(search_identifier,           KeyCode_T, KeyCode_Control);
-    Bind(list_all_locations_of_identifier, KeyCode_T, KeyCode_Control, KeyCode_Shift);
+    Bind(search_identifier,           KeyCode_F, KeyCode_Control, KeyCode_Shift);
+    Bind(list_all_locations_of_identifier, KeyCode_ForwardSlash, KeyCode_Alt, KeyCode_Shift);
     Bind(paste_and_indent,            KeyCode_V, KeyCode_Control);
     Bind(paste_next_and_indent,       KeyCode_V, KeyCode_Control, KeyCode_Shift);
     Bind(cut,                         KeyCode_X, KeyCode_Control);
@@ -196,7 +195,6 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     Bind(move_right_alpha_numeric_or_camel_boundary, KeyCode_F, KeyCode_Alt);
     
     
-    //    Bind(comment_line_toggle,        KeyCode_Semicolon, KeyCode_Control);
     Bind(comment_line_toggle,        KeyCode_ForwardSlash, KeyCode_Control);
     Bind(word_complete,              KeyCode_Tab);
     
@@ -212,11 +210,11 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     
     //Bind(write_todo,                 KeyCode_T, KeyCode_Alt);
     
-    Bind(list_all_locations_of_type_definition,               KeyCode_T, KeyCode_Alt);
-    //    Bind(list_all_locations_of_type_definition,               KeyCode_D, KeyCode_Alt);
+    Bind(list_all_locations_of_type_definition,               KeyCode_D, KeyCode_Alt);
     
-    Bind(list_all_locations_of_type_definition_of_identifier, KeyCode_Period, KeyCode_Alt);
-    //Bind(list_all_locations_of_type_definition_of_identifier, KeyCode_T, KeyCode_Alt, KeyCode_Shift);
+    Bind(jump_to_definition_at_cursor, KeyCode_Period, KeyCode_Alt);
+    Bind(jump_to_last_point, KeyCode_Comma, KeyCode_Alt);
+    Bind(list_all_locations_of_type_definition_of_identifier, KeyCode_T, KeyCode_Alt, KeyCode_Shift);
     
     Bind(open_long_braces,           KeyCode_LeftBracket, KeyCode_Control);
     Bind(open_long_braces_semicolon, KeyCode_LeftBracket, KeyCode_Control, KeyCode_Shift);
@@ -237,7 +235,7 @@ tom_mapping(Mapping *mapping, i64 global_id, i64 file_id, i64 code_id){
     //Bind(open_matching_file_cpp,     KeyCode_2, KeyCode_Alt);
     //Bind(write_zero_struct,          KeyCode_0, KeyCode_Control);
     
-    Bind(jump_to_definition,           KeyCode_H, KeyCode_Control);
+    Bind(jump_to_definition,           KeyCode_H, KeyCode_Alt);
 }
 
 // BOTTOM
